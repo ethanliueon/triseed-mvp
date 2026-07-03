@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - TriSeed Health</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="assets/logo.png" alt="TriSeed Health logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Our Mission</a>
+      <a href="explore.html">What We Explore</a>
+      <a href="think.html">How We Think</a>
+      <a href="contact.html">Contact Us</a>
+      <span class="location-badge">Based in California</span>
+    </nav>
+  </header>
+
+  <div class="container section">
+    <h2>Say Hello</h2>
+    <p>Whether you're a future intern, a potential business partner, or just want to say hi - this is the spot. Fill out the form below and we'll get back to you.</p>
+
+    <!-- this form doesnt actually send anywhere yet, script.js just catches the submit -->
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </div>
+
+  <div id="footer-goes-here"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

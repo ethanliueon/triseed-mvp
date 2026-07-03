@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TriSeed Health MVP</title>
+  <meta charset="UTF-8">
+  <title>TriSeed Health</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Hello World</h1>
-    <p>My website is officially working!</p>
+  <!-- header, same on every page, just copy pasted this part -->
+  <header>
+    <img src="assets/logo.png" alt="TriSeed Health logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Our Mission</a>
+      <a href="explore.html">What We Explore</a>
+      <a href="think.html">How We Think</a>
+      <a href="contact.html">Contact Us</a>
+      <span class="location-badge">Based in California</span>
+    </nav>
+  </header>
 
+  <!-- hero -->
+  <div class="hero">
+    <h1>Evidence-led health innovation for everyday unmet needs</h1>
+    <p>TriSeed Health is a health company based in California. We are exploring science based products and solutions to skin health, home diagnostics, and pet care.</p>
+    <a href="#talent" class="btn btn-primary">Partner with us</a>
+    <a href="explore.html" class="btn btn-secondary">What we explore</a>
+  </div>
+
+  <!-- what we do -->
+  <div class="container section">
+    <h2>What we do</h2>
+    <div class="row-boxes">
+      <div class="box">
+        <strong>Scar & Skin Recovery</strong>
+        <p>Researching science-backed approaches to support skin appearance, comfort, and recovery-related product concepts.</p>
+      </div>
+      <div class="box">
+        <strong>Functional Skin Care</strong>
+        <p>Exploring consumer-centered formulations and device-enabled concepts focused on usability, quality, and evidence.</p>
+      </div>
+      <div class="box">
+        <strong>Home Health Diagnostics</strong>
+        <p>Developing at-home testing concepts and digital interpretation pathways for wellness and health-management use cases.</p>
+      </div>
+      <div class="box">
+        <strong>Pet Care</strong>
+        <p>Designing practical home-care innovations for companion animals, including odor control and health-monitoring concepts.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the science approach, step tracker -->
+  <div class="container section">
+    <h2>The TriSeed Science Approach</h2>
+    <div class="step-box"><h3>1. Unmet Need</h3><p>We identify everyday health and wellness struggles.</p></div>
+    <div class="step-box"><h3>2. Evidence Review</h3><p>Aggregating and evaluating scientific literature.</p></div>
+    <div class="step-box"><h3>3. Concept Generation</h3><p>Designing highly usable, practical solutions.</p></div>
+    <div class="step-box"><h3>4. Feasibility Check</h3><p>Analyzing regulatory boundaries and manufacturing potential.</p></div>
+    <div class="step-box"><h3>5. Responsible Validation</h3><p>Planning safe translation into the real world.</p></div>
+  </div>
+
+  <!-- careers and mentorship -->
+  <div class="container section" id="talent">
+    <h2>Careers and Mentorship</h2>
+    <p>Whether you are here as a potential collaborator, a student looking for a summer internship, or just to verify our presence, we welcome transparent communication.</p>
+    <div class="two-col">
+      <div>
+        <h3>For Talent</h3>
+        <p>Join our growth and mentorship culture. Reach out to us using the contact info below.</p>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h3>For Partners</h3>
+        <p>To discuss potential business or research opportunities, contact us using our business email below.</p>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer gets filled in by script.js so we dont repeat it by hand on every page -->
+  <div id="footer-goes-here"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
