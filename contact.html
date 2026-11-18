@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Us - TriSeed Health</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Contact Us - TriSeed Health</title>
+<link rel="icon" href="assets/mark.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="page">
 
-  <header>
-    <img src="assets/logo.png" alt="TriSeed Health logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Our Mission</a>
-      <a href="explore.html">What We Explore</a>
-      <a href="think.html">How We Think</a>
-      <a href="contact.html">Contact Us</a>
-      <span class="location-badge">Based in California</span>
-    </nav>
-  </header>
-
-  <div class="container section">
-    <h2>Say Hello</h2>
-    <p>Whether you're a future intern, a potential business partner, or just want to say hi - this is the spot. Fill out the form below and we'll get back to you.</p>
-
-    <!-- this form doesnt actually send anywhere yet, script.js just catches the submit -->
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn btn-primary">Send</button>
-    </form>
+<div class="top">
+  <span class="where">Based in California</span>
+  <a class="logo" href="index.html"><img src="assets/mark.png" alt="TriSeed Health logo"><span class="name">TriSeed Health</span></a>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Our Mission</a>
+    <a href="explore.html">What We Explore</a>
+    <a href="think.html">How We Think</a>
+    <a href="contact.html" class="here">Contact Us</a>
   </div>
+</div>
 
-  <div id="footer-goes-here"></div>
+<h1>Say hello</h1>
+<p class="lead">Whether you're a future intern, a potential business partner, or just want to say hi, this is the spot.</p>
+<p>Fill out the form below and we'll get back to you, or email us directly at <a href="mailto:hello@triseedhealth.com">hello@triseedhealth.com</a>.</p>
 
-  <script src="script.js"></script>
+<form id="contact-form">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="6" required></textarea>
+  <button type="submit" class="button">Send</button>
+  <p id="result"></p>
+</form>
+
+<div class="bottom">
+  <p><a href="mailto:hello@triseedhealth.com">hello@triseedhealth.com</a> &middot; <a href="contact.html">Contact us</a> &middot; <a href="privacy.html">Privacy Policy / Terms of Use</a></p>
+  <p>Website content is for general informational purposes only and does not constitute medical advice, product labeling, or regulatory clearance.</p>
+  <p>&copy; 2026 TriSeed Health Inc. All rights reserved.</p>
+</div>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,45 +1,25 @@
+var form = document.getElementById("contact-form");
 
-const footerHTML = `
-  <footer>
-    <p>Contact us: <span class="placeholder" style="display:inline; padding:2px 8px;">phone number placeholder</span> | 
-    <a href="mailto:hello@triseedhealth.com">hello@triseedhealth.com</a></p>
-    <p>© 2026 TriSeed Health Inc. All rights reserved. | <a href="privacy.html">Privacy Policy / Terms of Use</a></p>
-  </footer>
-`;
+if (form) {
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    var btn = form.querySelector("button");
+    var out = document.getElementById("result");
+    btn.disabled = true;
+    btn.innerHTML = "Sending...";
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const footerSpot = document.getElementById("footer-goes-here");
-  if (footerSpot) {
-    footerSpot.innerHTML = footerHTML;
-  }
-
-
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault(); // stops the page from refreshing/actually submitting normally
-
-      const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzZYFiCyWuEkCBQroDpquQT1RkV5nhzYvuJayNu3pV__cppntqcuUo9Dir4txQ4NQWI/exec";
-
-      const formData = new FormData(contactForm);
-
-      fetch(GOOGLE_SHEET_URL, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors" // google apps script doesnt send back cors headers, this just lets the request go through
-      })
-        .then(function () {
-          alert("thanks for reaching out! we got your message.");
-          contactForm.reset();
-        })
-        .catch(function (error) {
-          alert("hm, something went wrong sending that. try again in a bit.");
-          console.log(error);
-        });
+    fetch("https://script.google.com/macros/s/AKfycbzZYFiCyWuEkCBQroDpquQT1RkV5nhzYvuJayNu3pV__cppntqcuUo9Dir4txQ4NQWI/exec", {
+      method: "POST",
+      body: new FormData(form),
+      mode: "no-cors"
+    }).then(function () {
+      out.innerHTML = "Thanks, your message has been sent. We'll reply by email.";
+      form.reset();
+    }).catch(function () {
+      out.innerHTML = "Sorry, that didn't go through. You can email us at hello@triseedhealth.com instead.";
+    }).then(function () {
+      btn.disabled = false;
+      btn.innerHTML = "Send";
     });
-  }
-  }
-);
-
-
+  };
+}

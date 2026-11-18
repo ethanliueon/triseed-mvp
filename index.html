@@ -1,87 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TriSeed Health</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>TriSeed Health</title>
+<link rel="icon" href="assets/mark.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="page">
 
-  <!-- header, same on every page, just copy pasted this part -->
-  <header>
-    <img src="assets/logo.png" alt="TriSeed Health logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Our Mission</a>
-      <a href="explore.html">What We Explore</a>
-      <a href="think.html">How We Think</a>
-      <a href="contact.html">Contact Us</a>
-      <span class="location-badge">Based in California</span>
-    </nav>
-  </header>
-
-  <!-- hero -->
-  <div class="hero">
-    <h1>Evidence-led health innovation for everyday unmet needs</h1>
-    <p>TriSeed Health is a health company based in California. We are exploring science based products and solutions to skin health, home diagnostics, and pet care.</p>
-    <a href="#talent" class="btn btn-primary">Partner with us</a>
-    <a href="explore.html" class="btn btn-secondary">What we explore</a>
+<div class="top">
+  <span class="where">Based in California</span>
+  <a class="logo" href="index.html"><img src="assets/mark.png" alt="TriSeed Health logo"><span class="name">TriSeed Health</span></a>
+  <div class="nav">
+    <a href="index.html" class="here">Home</a>
+    <a href="about.html">About Our Mission</a>
+    <a href="explore.html">What We Explore</a>
+    <a href="think.html">How We Think</a>
+    <a href="contact.html">Contact Us</a>
   </div>
+</div>
 
-  <!-- what we do -->
-  <div class="container section">
-    <h2>What we do</h2>
-    <div class="row-boxes">
-      <div class="box">
-        <strong>Scar & Skin Recovery</strong>
-        <p>Researching science-backed approaches to support skin appearance, comfort, and recovery-related product concepts.</p>
-      </div>
-      <div class="box">
-        <strong>Functional Skin Care</strong>
-        <p>Exploring consumer-centered formulations and device-enabled concepts focused on usability, quality, and evidence.</p>
-      </div>
-      <div class="box">
-        <strong>Home Health Diagnostics</strong>
-        <p>Developing at-home testing concepts and digital interpretation pathways for wellness and health-management use cases.</p>
-      </div>
-      <div class="box">
-        <strong>Pet Care</strong>
-        <p>Designing practical home-care innovations for companion animals, including odor control and health-monitoring concepts.</p>
-      </div>
-    </div>
-  </div>
+<h1>Health innovation done honestly</h1>
+<p class="lead">TriSeed Health is a health company based in California. We are exploring science-based products and solutions for skin health, home diagnostics, and pet care.</p>
+<a class="button" href="#talent">Partner with us</a>
+<a class="button plain" href="explore.html">What we explore</a>
 
-  <!-- the science approach, step tracker -->
-  <div class="container section">
-    <h2>The TriSeed Science Approach</h2>
-    <div class="step-box"><h3>1. Unmet Need</h3><p>We identify everyday health and wellness struggles.</p></div>
-    <div class="step-box"><h3>2. Evidence Review</h3><p>Aggregating and evaluating scientific literature.</p></div>
-    <div class="step-box"><h3>3. Concept Generation</h3><p>Designing highly usable, practical solutions.</p></div>
-    <div class="step-box"><h3>4. Feasibility Check</h3><p>Analyzing regulatory boundaries and manufacturing potential.</p></div>
-    <div class="step-box"><h3>5. Responsible Validation</h3><p>Planning safe translation into the real world.</p></div>
-  </div>
+<h2>What we do</h2>
 
-  <!-- careers and mentorship -->
-  <div class="container section" id="talent">
-    <h2>Careers and Mentorship</h2>
-    <p>Whether you are here as a potential collaborator, a student looking for a summer internship, or just to verify our presence, we welcome transparent communication.</p>
-    <div class="two-col">
-      <div>
-        <h3>For Talent</h3>
-        <p>Join our growth and mentorship culture. Reach out to us using the contact info below.</p>
-        <a href="contact.html">Contact Us</a>
-      </div>
-      <div>
-        <h3>For Partners</h3>
-        <p>To discuss potential business or research opportunities, contact us using our business email below.</p>
-        <a href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </div>
+<h3>Scar &amp; skin recovery</h3>
+<p>Researching science-backed approaches designed to support skin appearance, comfort, and recovery-related product concepts.</p>
 
-  <!-- footer gets filled in by script.js so we dont repeat it by hand on every page -->
-  <div id="footer-goes-here"></div>
+<h3>Functional skin care</h3>
+<p>Exploring consumer-centered formulations and device-enabled concepts focused on usability, quality, and evidence.</p>
 
-  <script src="script.js"></script>
+<h3>Home health diagnostics</h3>
+<p>Developing at-home testing concepts and digital interpretation pathways for wellness and health-management use cases.</p>
+
+<h3>Pet care</h3>
+<p>Designing practical home-care innovations for companion animals, including odor control and health-monitoring concepts.</p>
+
+<h2>The TriSeed science approach</h2>
+<ol>
+  <li><strong>Unmet need.</strong> We identify everyday health and wellness struggles.</li>
+  <li><strong>Evidence review.</strong> We aggregate and evaluate the scientific literature.</li>
+  <li><strong>Concept generation.</strong> We design highly usable, practical solutions.</li>
+  <li><strong>Feasibility check.</strong> We analyze regulatory boundaries and manufacturing potential.</li>
+  <li><strong>Responsible translation.</strong> We plan a safe path into the real world.</li>
+</ol>
+<p><a href="think.html">More on how we think</a></p>
+
+<h2 id="talent">Careers and mentorship</h2>
+<p>Whether you are here as a potential collaborator, a student looking for a summer internship, or just to verify our presence, we welcome transparent communication.</p>
+
+<h3>For talent</h3>
+<p>Join our growth and mentorship culture. Send us a note through our <a href="contact.html">contact page</a> and tell us a bit about yourself.</p>
+
+<h3>For partners</h3>
+<p>To discuss potential business or research opportunities, email us at <a href="mailto:hello@triseedhealth.com">hello@triseedhealth.com</a>.</p>
+
+<div class="bottom">
+  <p><a href="mailto:hello@triseedhealth.com">hello@triseedhealth.com</a> &middot; <a href="contact.html">Contact us</a> &middot; <a href="privacy.html">Privacy Policy / Terms of Use</a></p>
+  <p>Website content is for general informational purposes only and does not constitute medical advice, product labeling, or regulatory clearance.</p>
+  <p>&copy; 2026 TriSeed Health Inc. All rights reserved.</p>
+</div>
+
+</div>
 </body>
 </html>

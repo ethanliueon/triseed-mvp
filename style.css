@@ -1,254 +1,53 @@
-/* ---------------------------------------------------
-   TriSeed Health - style.css
-   this is the ONE css file every page uses.
-   colors are set up as variables at the top so if
-   the palette ever changes we only edit it in one spot
---------------------------------------------------- */
-
-:root {
-  --navy: #12233F;
-  --seed-green: #4CAF6D;
-  --clinical-teal: #1D7A74;
-  --trust-blue: #3E7CA6;
-  --warm-neutral: #D8A13B;
-  --grey-placeholder: #D9D9D9;
-  --bg: #FAFAF8;
-  --text: #1c1c1c;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+  background: #fff;
+  color: #1a1a1a;
+  font: 17px/1.65 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-/* basic container so stuff doesnt stretch edge to edge */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
+.page { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* ---------- header / nav ---------- */
-header {
-  background-color: white;
-  border-bottom: 2px solid var(--navy);
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+h1, h2, h3, .name { font-family: Georgia, "Times New Roman", serif; font-weight: normal; color: #12253F; }
+h1 { font-size: 38px; line-height: 1.2; margin: 0 0 16px; }
+h2 { font-size: 26px; margin: 56px 0 12px; }
+h3 { font-size: 19px; margin: 28px 0 4px; }
+p { margin: 0 0 16px; }
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 8px; }
 
-header img.logo {
-  height: 50px;
-}
+a { color: #12253F; }
+a:hover { color: #000; }
 
-nav a {
-  color: var(--navy);
-  text-decoration: none;
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 14px;
-}
+.top { padding: 28px 0 20px; border-bottom: 1px solid #ddd; margin-bottom: 48px; }
+.logo { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; }
+.logo img { width: 30px; }
+.name { font-size: 22px; }
+.where { float: right; font-size: 14px; color: #666; margin-top: 6px; }
 
-nav a:hover {
-  color: var(--clinical-teal);
-}
+.nav { margin-top: 18px; font-size: 15px; }
+.nav a { margin-right: 18px; text-decoration: none; }
+.nav a:hover, .nav a.here { text-decoration: underline; }
 
-.location-badge {
-  font-size: 12px;
-  color: white;
-  background-color: var(--trust-blue);
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-left: 15px;
-}
-
-/* ---------- hero section ---------- */
-.hero {
-  background-color: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-  border-radius: 0 0 20px 20px;
-}
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-}
-
-.btn {
+.button {
   display: inline-block;
+  background: #12253F;
+  color: #fff;
   padding: 10px 20px;
-  margin: 5px;
-  border-radius: 30px;
+  margin: 8px 10px 0 0;
   text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  font-size: 14px;
+  border: 1px solid #12253F;
 }
+.button:hover { background: #000; color: #fff; }
+.button.plain { background: #fff; color: #12253F; }
 
-.btn-primary {
-  background-color: var(--seed-green);
-  color: white;
-}
+.lead { font-size: 20px; color: #333; }
+.small { font-size: 14px; color: #666; }
 
-.btn-secondary {
-  background-color: white;
-  color: var(--navy);
-}
+.notice { border: 1px solid #c9a24a; background: #fdf8ec; padding: 16px 20px; margin-bottom: 40px; }
 
-/* ---------- generic section box, rounded corners everywhere ---------- */
-.section {
-  padding: 30px 20px;
-}
+label { display: block; margin: 16px 0 4px; font-size: 15px; }
+input, textarea { width: 100%; box-sizing: border-box; font: inherit; padding: 8px 10px; border: 1px solid #999; }
+form button { margin-top: 18px; font: inherit; cursor: pointer; }
 
-.section h2 {
-  color: var(--navy);
-  border-left: 5px solid var(--clinical-teal);
-  padding-left: 10px;
-}
-
-/* the 4 "what we do" boxes in a row */
-.row-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.box {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  padding: 20px;
-  flex: 1 1 200px;
-  max-width: 220px;
-}
-
-/* 5 step tracker, just stacked boxes bc keeping it simple */
-.step-box {
-  background-color: white;
-  border-left: 5px solid var(--trust-blue);
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 12px;
-}
-
-.step-box h3 {
-  margin: 0 0 5px 0;
-  color: var(--trust-blue);
-}
-
-/* two column layout for careers section */
-.two-col {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.two-col > div {
-  flex: 1 1 300px;
-  background-color: white;
-  border-radius: 15px;
-  padding: 20px;
-  border: 1px solid #ddd;
-}
-
-/* grey placeholder box - use this anytime we dont have real content/images yet */
-.placeholder {
-  background-color: var(--grey-placeholder);
-  border-radius: 15px;
-  padding: 20px;
-  color: #555;
-  font-style: italic;
-  text-align: center;
-}
-
-.placeholder-img {
-  background-color: var(--grey-placeholder);
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 10px auto;
-}
-
-/* team grid */
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.team-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  padding: 15px;
-  width: 200px;
-  text-align: center;
-}
-
-/* callout box for legal disclaimer */
-.callout {
-  background-color: var(--warm-neutral);
-  color: var(--navy);
-  border-radius: 15px;
-  padding: 15px 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* contact form, keeping it real basic */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  gap: 10px;
-}
-
-form input, form textarea {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-}
-
-/* ---------- footer, this gets injected on every page by script.js ---------- */
-footer {
-  background-color: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 25px 20px;
-  margin-top: 40px;
-  border-radius: 20px 20px 0 0;
-}
-
-footer a {
-  color: var(--warm-neutral);
-}
-
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav a {
-    margin: 5px;
-  }
-}
+.bottom { margin-top: 72px; padding: 24px 0 40px; border-top: 1px solid #ddd; font-size: 14px; color: #555; }
+.bottom p { margin-bottom: 8px; }
