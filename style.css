@@ -5,7 +5,8 @@ body {
   font: 17px/1.65 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-.page { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+.page { padding: 0 64px; }
+.page p, .page ol, .page ul, .page h1, form, .notice { max-width: 760px; }
 
 h1, h2, h3, .name { font-family: Georgia, "Times New Roman", serif; font-weight: normal; color: #12253F; }
 h1 { font-size: 38px; line-height: 1.2; margin: 0 0 16px; }
@@ -18,14 +19,12 @@ li { margin-bottom: 8px; }
 a { color: #12253F; }
 a:hover { color: #000; }
 
-.top { padding: 28px 0 20px; border-bottom: 1px solid #ddd; margin-bottom: 48px; }
+.top { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid #ddd; margin-bottom: 56px; }
 .logo { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; }
 .logo img { width: 30px; }
 .name { font-size: 22px; }
-.where { float: right; font-size: 14px; color: #666; margin-top: 6px; }
-
-.nav { margin-top: 18px; font-size: 15px; }
-.nav a { margin-right: 18px; text-decoration: none; }
+.nav { font-size: 15px; }
+.nav a { margin-left: 24px; text-decoration: none; }
 .nav a:hover, .nav a.here { text-decoration: underline; }
 
 .button {
@@ -39,6 +38,10 @@ a:hover { color: #000; }
 }
 .button:hover { background: #000; color: #fff; }
 .button.plain { background: #fff; color: #12253F; }
+
+.cols { display: flex; gap: 48px; }
+.cols > div { flex: 1; }
+.cols h3 { margin-top: 12px; }
 
 .lead { font-size: 20px; color: #333; }
 .small { font-size: 14px; color: #666; }
